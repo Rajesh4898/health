@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block page_title %}Dia Assist{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Privacy-first · Runs locally</div>
+    <h1 class="hero-title">Your personal <span class="grad-text">AI Health &amp; Wellness</span> assistant</h1>
+    <p class="hero-subtitle">Understand your health information privately on your device.</p>
+    <div class="hero-actions">
+      <a href="{{ url_for('upload_report') }}" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-file-medical"></i> Analyze My Report
+      </a>
+      <a href="{{ url_for('diet') }}" class="btn btn-outline btn-lg">
+        <i class="fa-solid fa-utensils"></i> Create Diet Plan
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>10+</strong><span>Lab tests parsed</span></div>
+      <div class="stat"><strong>PDF</strong><span>Health report download</span></div>
+      <div class="stat"><strong>100%</strong><span>Local processing</span></div>
+    </div>
+  </div>
+  <div class="hero-art"><i class="fa-solid fa-heart-pulse"></i></div>
+</section>
+
+<!-- Feature cards -->
+<section class="section">
+  <div class="section-head">
+    <h2>What Dia can do for you</h2>
+    <p>Four intelligent tools in one privacy-first workspace.</p>
+  </div>
+  <div class="feature-grid">
+    <a href="{{ url_for('upload_report') }}" class="feature-card">
+      <div class="feature-icon teal"><i class="fa-solid fa-file-medical"></i></div>
+      <h3>Medical Report Analyzer</h3>
+      <p>Upload PDF, DOC, DOCX, TXT or a scan (JPG/PNG). Dia extracts lab values, keeps your report's own reference ranges, and flags results as high, low, borderline or normal.</p>
+      <span class="feature-link">Analyze a report <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="{{ url_for('diet') }}" class="feature-card">
+      <div class="feature-icon blue"><i class="fa-solid fa-utensils"></i></div>
+      <h3>AI Diet Planner</h3>
+      <p>Get your estimated calories with Mifflin-St Jeor, macro targets, and a full sample Breakfast–Snack–Lunch–Dinner plan — adapted to your report and allergies.</p>
+      <span class="feature-link">Plan my diet <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="{{ url_for('upload_skin') }}" class="feature-card">
+      <div class="feature-icon pink"><i class="fa-solid fa-face-smile"></i></div>
+      <h3>Skin AI</h3>
+      <p>Upload a face image for a visual analysis of possible redness, dryness, oiliness or signs even like dark spots — with gentle skincare routines.</p>
+      <span class="feature-link">Try Skin AI <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <div class="feature-card">
+      <div class="feature-icon gold"><i class="fa-solid fa-comment-dots"></i></div>
+      <h3>Ask Dia Chatbot</h3>
+      <p>'Explain my report', 'Why is my glucose high?', 'What foods should I avoid?' — Dia answers from your actual report with cautious, educational language.</p>
+      <span class="feature-link chat-link" data-open-chat>Open Ask Dia <i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy + disclaimer -->
+<section class="section">
+  <div class="info-duo">
+    <div class="info-card">
+      <div class="feature-icon teal"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3>Your privacy matters</h3>
+      <p>Uploaded reports and skin photos are stored <strong>only on your device</strong> in a private folder that is never exposed on the web. You can delete everything with one click any time.</p>
+    </div>
+    <div class="info-card warn">
+      <div class="feature-icon gold"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h3>Medical disclaimer</h3>
+      <p>Dia Assist is an <strong>educational prototype</strong>. It does not diagnose, treat or prescribe. Always discuss your results with a licensed healthcare professional.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
