@@ -95,7 +95,7 @@ python app.py
 Open Google Chrome and go to:
 
 ```
-http://127.0.0.1:5001
+http://127.0.0.1:5002
 ```
 
 Use **Ctrl+C** in the terminal to stop the server.
